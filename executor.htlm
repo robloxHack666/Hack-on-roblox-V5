@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Executor Web v4.2</title>
+    <style>
+        /* Style général de la page */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Conteneur de l'exécuteur au milieu de l'écran */
+        .executor-container {
+            background-color: #1e1e1e;
+            border: 2px solid #3a3a3a;
+            border-radius: 8px;
+            width: 500px;
+            padding: 20px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.7);
+            text-align: center;
+        }
+
+        /* Barre supérieure simulée */
+        .header {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #00ff88;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #3a3a3a;
+            padding-bottom: 10px;
+        }
+
+        /* Zone de texte pour coller le script */
+        textarea {
+            width: 100%;
+            height: 180px;
+            background-color: #141414;
+            color: #00ff00;
+            border: 1px solid #444;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            resize: none;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        textarea:focus {
+            border-color: #00ff88;
+        }
+
+        /* Bouton Exécuter */
+        .btn-execute {
+            background-color: #00ff88;
+            color: #121212;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+            transition: background 0.2s;
+        }
+
+        .btn-execute:hover {
+            background-color: #00cc6e;
+        }
+
+        /* Message de statut invisible par défaut */
+        #status-message {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #ffcc00;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="executor-container">
+        <div class="header">Roblox Web Executor Pro</div>
+        
+        <!-- Zone pour coller le script -->
+        <textarea placeholder="-- Collez votre script Lua ici..."></textarea>
+        
+        <!-- Bouton de farce -->
+        <button class="btn-execute" onclick="lancerFarce()">Exécuter</button>
+        
+        <!-- Message de chargement temporaire -->
+        <div id="status-message">Exécution du script en cours...</div>
+    </div>
+
+    <script>
+        function lancerFarce() {
+            // Afficher le message d'exécution
+            var msg = document.getElementById("status-message");
+            msg.style.display = "block";
+            
+            // Attendre 2 secondes (2000 millisecondes) puis rediriger
+            setTimeout(function() {
+                window.location.href = "https://roblox.com";
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>
